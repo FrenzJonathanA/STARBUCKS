@@ -1,9 +1,47 @@
-// .header{
-//     position: relative;
-//     position: fixed;
-//     padding: 1rem;
-//     width: 100%;
-//     z-index: 99999;
+.header{
+    position: relative;
+    //position: fixed;
+    padding: 1rem;
+    width: 100%;
+    z-index: 99999;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .toggle__menu{
+            margin-left: 1rem;
+            padding: .9rem 1rem;
+            margin-right: -38rem;
+            &:hover{    
+                background-color: $clr-primary;
+                border-radius: .5rem;
+            }
+            span{
+                width: 3rem;
+                height: .2rem;
+                background-color: $clr-dark;
+                display: block;
+                border-radius: 2rem;
+            }
+            &.open{
+                background-color: $clr-primary;
+                border-radius: 1rem;
+            }
+            span:nth-child(2){
+                margin: .5rem 0;
+            }
+        }
+    }
+
+    .branding{
+        img{
+            @include imgFit(5rem, 5rem);
+        }
+    }
+    
+
+
+}
 //     a{
 //         font-weight: bold;
 //     }
